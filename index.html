@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I Love You, Ana</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9c2e0, #b1dcfb); /* Soft pink to light blue gradient */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .decoration {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('images/HelloKitty.webp'), url('images/c7d9e106fe08c1de6beac091f4c4e84b.png');
+    background-position: left bottom, right bottom;
+    background-repeat: no-repeat;
+    background-size: 20%, 20%;
+    pointer-events: none; /* Allows clicks to pass through */
+    opacity: 0.5; /* Adjust for desired intensity */
+  }
+
+  .heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: 20px 0;
+  }
+
+  .heart:before,
+  .heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: rgb(230, 0, 0);
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+  }
+
+  .heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+  }
+
+  .message {
+    color: #ff3399;
+    font-size: 2em;
+    animation: glow 1s ease-in-out infinite alternate;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .message:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    margin: 20px 0;
+  }
+
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff66b3, 0 0 40px #ff66b3, 0 0 50px #ff66b3, 0 0 60px #ff66b3, 0 0 70px #ff66b3;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff99cc, 0 0 40px #ff99cc, 0 0 50px #ff99cc, 0 0 60px #ff99cc, 0 0 70px #ff99cc, 0 0 80px #ff99cc;
+    }
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="decoration"></div> <!-- Decorative background -->
+<div class="heart"></div>
+<img src="images/us.jpg" alt="Picture of Us">
+<div class="message" onclick="displayLoveNote()">I Love You, Ana!</div>
+<div class="container">
+    <div class="hello-kitty"></div>
+    <div class="eye-container">
+      <div class="eye left-eye"></div>
+      <div class="eye right-eye"></div>
+    </div>
+    <div class="nose"></div>
+    <div class="whisker w1"></div>
+    <div class="whisker w2"></div>
+    <div class="whisker w3"></div>
+    <div class="whisker w4"></div>
+    <div class="whisker w5"></div>
+    <div class="whisker w6"></div>
+    <div class="ear left-ear"></div>
+    <div class="ear right-ear"></div>
+    <div class="bow bow-center"></div>
+    <div class="bow bow-left"></div>
+    <div class="bow bow-right"></div>
+    <div class="bow bow-detail-left"></div>
+    <div class="bow bow-detail-right"></div>
+    <div class="ear-detail ear-detail-left"></div>
+    <div class="ear-detail ear-detail-right"></div>
+    <div class="ear-line"></div>
+    
+  </div>
+
+<script>
+function displayLoveNote() {
+  alert('Every moment with you is special. Looking forward to making more memories together. I love you my baby');
+}
+</script>
+
+</body>
+</html>
